@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="619.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bitcom.controller">
+   <children>
+      <Label layoutX="239.0" layoutY="51.0" text="UAS JAVA PROGRAMMING">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="75.0" text="M DOBITH SYADAD RIYADI">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="145.0" text="No Induk Penduduk" />
+      <Label layoutX="71.0" layoutY="180.0" text="Nama Lengkap" />
+      <Label layoutX="71.0" layoutY="217.0" text="Jenis Kelamin" />
+      <Label layoutX="71.0" layoutY="254.0" text="Tanggal Lahir" />
+      <Label layoutX="71.0" layoutY="291.0" text="Agama" />
+      <TextField fx:id="etNIK" layoutX="212.0" layoutY="141.0" prefHeight="25.0" prefWidth="204.0" />
+      <TextField fx:id="etNama" layoutX="212.0" layoutY="176.0" prefHeight="25.0" prefWidth="204.0" />
+      <RadioButton fx:id="rbJKlaki" layoutX="212.0" layoutY="217.0" mnemonicParsing="false" text="Laki-laki" />
+      <RadioButton fx:id="rbJKpere" layoutX="334.0" layoutY="217.0" mnemonicParsing="false" text="Perempuan" />
+      <DatePicker fx:id="dpTgl" layoutX="212.0" layoutY="250.0" prefHeight="25.0" prefWidth="204.0" />
+      <ComboBox fx:id="cbAgama" layoutX="212.0" layoutY="287.0" prefHeight="25.0" prefWidth="204.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Islam" />
+               <String fx:value="Hindu" />
+               <String fx:value="Kristen" />
+               <String fx:value="Budha" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button fx:id="btntambah" layoutX="498.0" layoutY="134.0" mnemonicParsing="false" onAction="#aksiTambah" prefHeight="55.0" prefWidth="106.0" text="Tambah Data" />
+      <Button fx:id="btncetak" layoutX="498.0" layoutY="199.0" mnemonicParsing="false" onAction="#aksiCetak" prefHeight="55.0" prefWidth="106.0" text="Cetak Data" />
+      <Button fx:id="btnkeluar" layoutX="498.0" layoutY="264.0" mnemonicParsing="false" onAction="#aksiKeluar" prefHeight="55.0" prefWidth="106.0" text="Keluar App" />
+      <TableView fx:id="tblPenduduk" layoutX="71.0" layoutY="361.0" prefHeight="216.0" prefWidth="535.0">
+        <columns>
+          <TableColumn fx:id="colnik" prefWidth="75.0" text="NIK" />
+          <TableColumn fx:id="colnama" prefWidth="120.0" text="Nama Lengkap" />
+           <TableColumn fx:id="coljk" prefWidth="110.0" text="Jenis Kelamin" />
+           <TableColumn fx:id="coltgl" prefWidth="121.0" text="Tanggal Lahir" />
+           <TableColumn fx:id="colagama" prefWidth="108.0" text="Agama" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
